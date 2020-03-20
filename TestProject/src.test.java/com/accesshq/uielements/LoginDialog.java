@@ -13,7 +13,6 @@ public class LoginDialog {
 
 	public void clickLogin() throws Exception {
 		for (WebElement button: element.findElements(By.tagName("button"))) {
-			System.out.println(button.getText());
 			if(button.getText().contentEquals("LOGIN")) {
 				button.click();
 				return;

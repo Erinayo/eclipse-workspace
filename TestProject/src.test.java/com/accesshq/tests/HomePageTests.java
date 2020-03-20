@@ -1,9 +1,9 @@
 package com.accesshq.tests;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.accesshq.pages.HomePage;
-import com.accesshq.uielements.LoginDialog;
 
 public class HomePageTests extends BaseTestSuite {
 	
@@ -14,7 +14,39 @@ public class HomePageTests extends BaseTestSuite {
 	@Test
 	void StateTransitionTest() {
 		HomePage homePage = new HomePage(driver);
-		LoginDialog loginDialog = homePage.clickUsersMenuItem();
+		
+		homePage.clickTransitionButton();
+		Assertions.assertEquals("CLICK ME UP!", homePage.getTransitionText());
+		homePage.clickTransitionButton();
+		Assertions.assertEquals("CLICK ME DOWN!", homePage.getTransitionText());
 	}
 
+	@Test
+	void LoveListTest() {
+		HomePage homePage = new HomePage(driver);
+		
+		//homePage.clickListHeart("List item 2");
+		Assertions.assertEquals("CLICK ME UP!", homePage.getTransitionText());
+	}
+	
+	@Test
+	void HelloGreetingTest() {
+		HomePage homePage = new HomePage(driver);
+		
+		homePage.setForename("Dan");
+		homePage.clickButton("submit");
+		Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
+	}
+	
+	@Test
+	void ButtonsTest() {
+		HomePage homePage = new HomePage(driver);
+		
+		homePage.clickButton("login");
+		homePage.clickButton("cancel");
+		//homePage.clickButton("home");
+		homePage.clickButton("link-button");
+
+		Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
+	}
 }

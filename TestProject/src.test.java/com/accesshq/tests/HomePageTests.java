@@ -3,6 +3,7 @@ package com.accesshq.tests;
 import org.junit.jupiter.api.Test;
 
 import com.accesshq.pages.HomePage;
+import com.accesshq.uielements.LoginDialog;
 
 public class HomePageTests extends BaseTestSuite {
 	
@@ -11,8 +12,9 @@ public class HomePageTests extends BaseTestSuite {
 	}
 
 	@Test
-	void test() {
+	void StateTransitionTest() {
 		HomePage homePage = new HomePage(driver);
+		LoginDialog loginDialog = homePage.clickUsersMenuItem();
 	}
 
 }

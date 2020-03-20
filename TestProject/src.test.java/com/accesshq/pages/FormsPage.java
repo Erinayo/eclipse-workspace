@@ -2,10 +2,10 @@ package com.accesshq.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends BasePage {
+public class FormsPage extends BasePage{
 
-	public HomePage(WebDriver driver) {
+	public FormsPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 }

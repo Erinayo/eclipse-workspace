@@ -30,6 +30,8 @@ public abstract class BaseTestSuite {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 		driver.get(url);
 	}
 

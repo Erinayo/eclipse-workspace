@@ -28,7 +28,7 @@ public abstract class BasePage {
 	
 	public LoginDialog clickUsersMenuItem() {
 		driver.findElement(By.cssSelector(".users")).click();
-		WebElement loginDialog = new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("loginDialog")));
+		WebElement loginDialog = new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.id("loginDialog")));
 		return new LoginDialog(loginDialog);
 	}
 

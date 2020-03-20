@@ -26,7 +26,7 @@ public class PlanetsPage extends BasePage{
 	}
 
 	public Object getAlertMessage() {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 5);
 		WebElement popup = wait.until(ExpectedConditions.presenceOfElementLocated(By.className("popup")));
 		wait.until(ExpectedConditions.textToBePresentInElement(popup, "Exploring"));
 

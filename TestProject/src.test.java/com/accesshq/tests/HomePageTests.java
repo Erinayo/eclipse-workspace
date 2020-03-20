@@ -22,11 +22,11 @@ public class HomePageTests extends BaseTestSuite {
 	}
 
 	@Test
-	void LoveListTest() {
+	void LoveListTest() throws Exception {
 		HomePage homePage = new HomePage(driver);
 		
-		//homePage.clickListHeart("List item 2");
-		Assertions.assertEquals("CLICK ME UP!", homePage.getTransitionText());
+		homePage.clickListHeart("List Item 2");
+		Assertions.assertEquals("You loved List Item 2", homePage.getPopupMessage());
 	}
 	
 	@Test
@@ -34,7 +34,7 @@ public class HomePageTests extends BaseTestSuite {
 		HomePage homePage = new HomePage(driver);
 		
 		homePage.setForename("Dan");
-		homePage.clickButton("submit");
+		homePage.clickSubmitButton();
 		Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
 	}
 	
@@ -42,11 +42,11 @@ public class HomePageTests extends BaseTestSuite {
 	void ButtonsTest() {
 		HomePage homePage = new HomePage(driver);
 		
-		homePage.clickButton("login");
-		homePage.clickButton("cancel");
-		//homePage.clickButton("home");
-		homePage.clickButton("link-button");
+		homePage.clickLoginButton("login");
+		homePage.clickCancelButton("cancel");
+		homePage.clickHomeButton("home");
+		homePage.clickLinkButton("link-button");
 
-		Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
+		//Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
 	}
 }

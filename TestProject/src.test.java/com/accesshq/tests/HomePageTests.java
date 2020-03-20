@@ -1,17 +1,18 @@
-package com.my.tests;
+package com.accesshq.tests;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
-class HomePageTests extends BaseTestSuite {
+import com.accesshq.pages.HomePage;
+
+public class HomePageTests extends BaseTestSuite {
 	
 	public HomePageTests() {
-		super("");
+		super("https://d1iw6mb9di5l9r.cloudfront.net/");
 	}
 
 	@Test
 	void test() {
-		driver.findElement(By.tagName("body"));
+		HomePage homePage = new HomePage(driver);
 	}
 
 }

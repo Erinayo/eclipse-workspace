@@ -1,4 +1,4 @@
-package com.my.tests;
+package com.accesshq.tests;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-class BaseTestSuite {
+public abstract class BaseTestSuite {
 
 	protected static WebDriver driver; 
 	protected String url;

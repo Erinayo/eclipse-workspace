@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.accesshq.planets.GetPlanetStrategy;
 import com.accesshq.planets.Planet;
 
 public class PlanetsPage extends BasePage{
@@ -14,15 +15,8 @@ public class PlanetsPage extends BasePage{
 		super(driver);
 	}
 
-	public Planet getPlanet(String planetName) throws Exception {
-		for(WebElement planetElement: driver.findElements(By.className("planet"))) {
-			Planet planet = new Planet(planetElement);
-			if(planet.getName().equals(planetName)) {
-				return planet;
-			}
-		}
-
-		throw new Exception("Unable to find planet");
+	public Planet getPlanet(GetPlanetStrategy getStrategy) throws Exception {
+		return getStrategy.getPlanet(driver.findElements(By.className("planet")));
 	}
 
 	public Object getAlertMessage() {

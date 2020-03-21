@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import com.accesshq.pages.HomePage;
 import com.accesshq.pages.PlanetsPage;
+import com.accesshq.planets.GetPlanetStrategyName;
 import com.accesshq.planets.Planet;
 
 class PLanetsPageTests extends BaseTestSuite{
@@ -17,11 +18,10 @@ class PLanetsPageTests extends BaseTestSuite{
 	void ExploreTest() throws Exception {
 		HomePage homePage = new HomePage(driver);
 		PlanetsPage planetsPage = homePage.clickPlanetsMenuItem();	
-		Planet planet = planetsPage.getPlanet("Neptune");
 		
+		Planet planet = planetsPage.getPlanet(new GetPlanetStrategyName("Neptune"));
 		planet.clickExplore();
 		Assertions.assertEquals("Exploring Neptune", planetsPage.getAlertMessage());
-		
 	}
 
 }

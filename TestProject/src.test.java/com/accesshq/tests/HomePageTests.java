@@ -42,10 +42,10 @@ public class HomePageTests extends BaseTestSuite {
 	void ButtonsTest() {
 		HomePage homePage = new HomePage(driver);
 		
-		homePage.clickLoginButton("login");
-		homePage.clickCancelButton("cancel");
-		homePage.clickHomeButton("home");
-		homePage.clickLinkButton("link-button");
+		homePage.clickLoginButton();
+		homePage.clickCancelButton();
+		homePage.clickHomeButton();
+		homePage.clickLinkButton();
 
 		//Assertions.assertEquals("Hello Dan", homePage.getPopupMessage());
 	}

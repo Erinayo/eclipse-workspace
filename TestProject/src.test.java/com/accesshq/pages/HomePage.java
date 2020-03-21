@@ -44,23 +44,23 @@ public class HomePage extends BasePage {
 		new WebDriverWait(driver, 5).until(ExpectedConditions.elementToBeClickable(By.cssSelector("[aria-label='"+buttonId+"']"))).click();		
 	}
 
-	public void clickLoginButton(String string) {
+	public void clickLoginButton() {
 		clickButton("login");
 	}
 	
-	public void clickHomeButton(String string) {
+	public void clickHomeButton() {
 		clickButton("cancel");
 	}
 	
-	public void clickCancelButton(String string) {
+	public void clickCancelButton() {
 		clickButton("cancel");
 	}
 	
-	public void clickLinkButton(String string) {
+	public void clickLinkButton() {
 		clickButton("login");
 	}
 	
-	public void clickUploadButton(String string) {
+	public void clickUploadButton() {
 		clickButton("login");
 	}
 

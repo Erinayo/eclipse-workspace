@@ -18,6 +18,10 @@ public class Planet {
 	public void clickExplore() {
 		element.findElement(By.tagName("button")).click();
 	}
+
+	public double getRadius() {
+		return Double.parseDouble(element.findElement(By.className("radius")).getText());
+	}
 	
 	
 }

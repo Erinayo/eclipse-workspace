@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public abstract class GetPlanetStrategy {
 	
-	protected abstract boolean compare(Planet planets);
+	protected abstract boolean compare(Planet planet);
 	
 	public Planet getPlanet(List<WebElement> planets) throws Exception {
 		for(WebElement planetElement: planets) {

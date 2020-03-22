@@ -9,9 +9,9 @@ import com.accesshq.planets.GetPlanetStrategyName;
 import com.accesshq.planets.GetPlanetStrategyRadius;
 import com.accesshq.planets.Planet;
 
-class PLanetsPageTests extends BaseTestSuite{
+class PlanetsPageTests extends BaseTestSuite{
 
-	public PLanetsPageTests() {
+	public PlanetsPageTests() {
 		super("https://d1iw6mb9di5l9r.cloudfront.net/");
 	}
 
